@@ -4,126 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Private Property Security</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
       body {
-        margin: 0;
+        background-color: #000;
+        color: #fff;
         font-family: Arial, sans-serif;
-        background-color: #000; /* black background */
-        color: #fff; /* white text */
       }
 
       header {
         background-color: #111;
-        padding: 20px;
-        text-align: center;
         border-bottom: 2px solid #444;
       }
 
-      header h1 {
-        margin: 0;
-        font-size: 2em;
-        color: #f2f2f2;
-      }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 10px;
-      }
-
       nav a {
-        color: #fff;
-        text-decoration: none;
+        color: #fff !important;
         font-weight: bold;
-        transition: color 0.3s;
       }
 
       nav a:hover {
-        color: #0f0; /* highlight links in green on hover */
+        color: #0f0 !important;
       }
 
-      main {
-        padding: 40px 20px;
+      .hero {
+        position: relative;
         text-align: center;
+        color: white;
       }
 
-      main h2 {
-        font-size: 1.8em;
-        margin-bottom: 20px;
+      .hero img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        opacity: 0.8;
       }
 
-      main p {
-        font-size: 1.2em;
-        max-width: 600px;
-        margin: 0 auto 20px auto;
-        line-height: 1.5;
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px #000;
+      }
+
+      .btn-custom {
+        background-color: #0f0;
+        color: #000;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .btn-custom:hover {
+        background-color: #0a0;
       }
 
       footer {
         background-color: #111;
+        border-top: 2px solid #444;
         text-align: center;
         padding: 15px;
-        border-top: 2px solid #444;
-        font-size: 0.9em;
         color: #888;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: #0f0;
-        color: #000;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
-
-      .btn:hover {
-        background-color: #0a0;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>NOBLE<br />Secure Property Services</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <!-- Header with Navbar -->
+    <header class="p-3">
+      <div class="container">
+        <h1 class="text-center mb-3">NOBLE<br />CONSTRUCTION SECURITY</h1>
+        <nav class="nav justify-content-center">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section id="about">
-        <h2>Protecting Your Property 24/7</h2>
+    <!-- Hero Image -->
+    <div class="hero my-4">
+      <img src="images/NOBLE.jpg" alt="Security Patrol" />
+      <div class="hero-text">Protecting Your Property 24/7</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container text-center mb-5">
+      <section id="about" class="mb-5">
+        <h2>About Us</h2>
         <p>
           We provide professional private property security services to ensure
           your assets are always safe. Our team is trained, reliable, and ready
           to respond at a moment’s notice.
         </p>
-        <a href="#contact" class="btn">Get a Quote</a>
+        <a href="#contact" class="btn btn-custom">Get a Quote</a>
       </section>
 
-      <section id="services">
+      <section id="services" class="mb-5">
         <h2>Our Services</h2>
-        <p>
-          On-site security, surveillance monitoring, patrol services, and risk
-          assessments. Tailored security solutions for residential and
-          commercial properties.
-        </p>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-body">
+                <h5 class="card-title">On-Site Security</h5>
+                <p class="card-text">
+                  Professional security guards to monitor your property 24/7.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-body">
+                <h5 class="card-title">Surveillance Monitoring</h5>
+                <p class="card-text">
+                  State-of-the-art cameras and monitoring to keep your property
+                  secure.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-white h-100">
+              <div class="card-body">
+                <h5 class="card-title">Risk Assessments</h5>
+                <p class="card-text">
+                  Expert evaluations to prevent potential threats before they
+                  occur.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="mb-5">
         <h2>Contact Us</h2>
         <p>Email: info@secureproperty.com</p>
         <p>Phone: (555) 123-4567</p>
       </section>
     </main>
 
-    <footer>&copy; 2026  Kaiser Shomstok . All rights reserved.</footer>
+    <!-- Footer -->
+    <footer>&copy; 2026 Kaiser Shomstok. All rights reserved.</footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-
